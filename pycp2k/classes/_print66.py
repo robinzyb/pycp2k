@@ -1,11 +1,14 @@
 from pycp2k.inputsection import InputSection
-from ._ms_restart1 import _ms_restart1
+from ._mo_cubes2 import _mo_cubes2
 
 
 class _print66(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.MS_RESTART = _ms_restart1()
+        self.Mo_coeff_atom = []
+        self.Mo_coeff_atom_state = []
+        self.MO_CUBES = _mo_cubes2()
         self._name = "PRINT"
-        self._subsections = {'MS_RESTART': 'MS_RESTART'}
+        self._repeated_keywords = {'Mo_coeff_atom': 'MO_COEFF_ATOM', 'Mo_coeff_atom_state': 'MO_COEFF_ATOM_STATE'}
+        self._subsections = {'MO_CUBES': 'MO_CUBES'}
 

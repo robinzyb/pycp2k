@@ -22,8 +22,8 @@ class _mixed1(InputSection):
         self.MAPPING_list = []
         self.PRINT = _print18()
         self._name = "MIXED"
-        self._keywords = {'Mixing_type': 'MIXING_TYPE', 'Ngroups': 'NGROUPS', 'Group_partition': 'GROUP_PARTITION'}
-        self._subsections = {'MIXED_CDFT': 'MIXED_CDFT', 'LINEAR': 'LINEAR', 'PRINT': 'PRINT', 'COUPLING': 'COUPLING', 'RESTRAINT': 'RESTRAINT', 'GENERIC': 'GENERIC'}
+        self._keywords = {'Mixing_type': 'MIXING_TYPE', 'Group_partition': 'GROUP_PARTITION', 'Ngroups': 'NGROUPS'}
+        self._subsections = {'LINEAR': 'LINEAR', 'MIXED_CDFT': 'MIXED_CDFT', 'COUPLING': 'COUPLING', 'RESTRAINT': 'RESTRAINT', 'GENERIC': 'GENERIC', 'PRINT': 'PRINT'}
         self._repeated_subsections = {'MAPPING': '_mapping1'}
         self._aliases = {'Ngroup': 'Ngroups'}
         self._attributes = ['MAPPING_list']

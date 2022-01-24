@@ -25,7 +25,7 @@ class _active_space1(InputSection):
         self.ERI_GPW = _eri_gpw1()
         self.LOCALIZE = _localize3()
         self._name = "ACTIVE_SPACE"
-        self._keywords = {'Subspace_atom': 'SUBSPACE_ATOM', 'Isolated_system': 'ISOLATED_SYSTEM', 'Active_electrons': 'ACTIVE_ELECTRONS', 'Active_orbitals': 'ACTIVE_ORBITALS', 'Inactive_orbitals': 'INACTIVE_ORBITALS', 'Orbital_selection': 'ORBITAL_SELECTION', 'Subspace_shell': 'SUBSPACE_SHELL', 'Model': 'MODEL', 'Inactive_electrons': 'INACTIVE_ELECTRONS'}
-        self._subsections = {'PRINT_ORBITAL_CUBES': 'PRINT_ORBITAL_CUBES', 'LOCALIZE': 'LOCALIZE', 'FCIDUMP': 'FCIDUMP', 'ERI_GPW': 'ERI_GPW', 'ERI': 'ERI'}
+        self._keywords = {'Model': 'MODEL', 'Active_electrons': 'ACTIVE_ELECTRONS', 'Inactive_electrons': 'INACTIVE_ELECTRONS', 'Active_orbitals': 'ACTIVE_ORBITALS', 'Inactive_orbitals': 'INACTIVE_ORBITALS', 'Isolated_system': 'ISOLATED_SYSTEM', 'Orbital_selection': 'ORBITAL_SELECTION', 'Subspace_atom': 'SUBSPACE_ATOM', 'Subspace_shell': 'SUBSPACE_SHELL'}
+        self._subsections = {'FCIDUMP': 'FCIDUMP', 'PRINT_ORBITAL_CUBES': 'PRINT_ORBITAL_CUBES', 'ERI': 'ERI', 'ERI_GPW': 'ERI_GPW', 'LOCALIZE': 'LOCALIZE'}
         self._attributes = ['Section_parameters']
 

@@ -12,6 +12,6 @@ class _piglet1(InputSection):
         self.RNG_INIT = _rng_init9()
         self.EXTRA_DOF = _extra_dof1()
         self._name = "PIGLET"
-        self._keywords = {'Nextra_dof': 'NEXTRA_DOF', 'Smatrix_init': 'SMATRIX_INIT', 'Matrices_file_name': 'MATRICES_FILE_NAME'}
-        self._subsections = {'EXTRA_DOF': 'EXTRA_DOF', 'RNG_INIT': 'RNG_INIT'}
+        self._keywords = {'Nextra_dof': 'NEXTRA_DOF', 'Matrices_file_name': 'MATRICES_FILE_NAME', 'Smatrix_init': 'SMATRIX_INIT'}
+        self._subsections = {'RNG_INIT': 'RNG_INIT', 'EXTRA_DOF': 'EXTRA_DOF'}
 

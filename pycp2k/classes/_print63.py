@@ -1,17 +1,15 @@
 from pycp2k.inputsection import InputSection
-from ._guess_vectors1 import _guess_vectors1
-from ._iteration_info4 import _iteration_info4
-from ._detailed_energy3 import _detailed_energy3
-from ._restart13 import _restart13
+from ._nablavks_cubes1 import _nablavks_cubes1
+from ._g_tensor1 import _g_tensor1
+from ._response_function_cubes3 import _response_function_cubes3
 
 
 class _print63(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.GUESS_VECTORS = _guess_vectors1()
-        self.ITERATION_INFO = _iteration_info4()
-        self.DETAILED_ENERGY = _detailed_energy3()
-        self.RESTART = _restart13()
+        self.NABLAVKS_CUBES = _nablavks_cubes1()
+        self.G_TENSOR = _g_tensor1()
+        self.RESPONSE_FUNCTION_CUBES = _response_function_cubes3()
         self._name = "PRINT"
-        self._subsections = {'RESTART': 'RESTART', 'GUESS_VECTORS': 'GUESS_VECTORS', 'DETAILED_ENERGY': 'DETAILED_ENERGY', 'ITERATION_INFO': 'ITERATION_INFO'}
+        self._subsections = {'NABLAVKS_CUBES': 'NABLAVKS_CUBES', 'G_TENSOR': 'G_TENSOR', 'RESPONSE_FUNCTION_CUBES': 'RESPONSE_FUNCTION_CUBES'}
 

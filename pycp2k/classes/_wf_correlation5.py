@@ -6,6 +6,7 @@ from ._ri_mp25 import _ri_mp25
 from ._opt_ri_basis5 import _opt_ri_basis5
 from ._ri_rpa5 import _ri_rpa5
 from ._ri_laplace5 import _ri_laplace5
+from ._im_time15 import _im_time15
 from ._cphf5 import _cphf5
 from ._interaction_potential15 import _interaction_potential15
 from ._eri_mme7 import _eri_mme7
@@ -23,8 +24,14 @@ class _wf_correlation5(InputSection):
         self.Col_block = None
         self.Calc_cond_num = None
         self.Ri_metric = None
+        self.Omega_metric = None
+        self.Cutoff_radius_metric = None
+        self.Eps_range_metric = None
         self.Eri_method = None
-        self.Minimal_gap = None
+        self.Eri_blksize = None
+        self.Im_time = None
+        self.Do_svd = None
+        self.Eps_svd = None
         self.MP2_INFO = _mp2_info5()
         self.DIRECT_CANONICAL = _direct_canonical5()
         self.WFC_GPW = _wfc_gpw5()
@@ -32,13 +39,14 @@ class _wf_correlation5(InputSection):
         self.OPT_RI_BASIS = _opt_ri_basis5()
         self.RI_RPA = _ri_rpa5()
         self.RI_LAPLACE = _ri_laplace5()
+        self.IM_TIME = _im_time15()
         self.CPHF = _cphf5()
         self.INTERACTION_POTENTIAL = _interaction_potential15()
         self.ERI_MME = _eri_mme7()
         self._name = "WF_CORRELATION"
-        self._keywords = {'Scale_t': 'SCALE_T', 'Method': 'METHOD', 'Scale_s': 'SCALE_S', 'Calc_cond_num': 'CALC_COND_NUM', 'Eri_method': 'ERI_METHOD', 'Row_block': 'ROW_BLOCK', 'Memory': 'MEMORY', 'Ri_metric': 'RI_METRIC', 'Group_size': 'GROUP_SIZE', 'Col_block': 'COL_BLOCK', 'Minimal_gap': 'MINIMAL_GAP'}
-        self._subsections = {'DIRECT_CANONICAL': 'DIRECT_CANONICAL', 'RI_MP2': 'RI_MP2', 'MP2_INFO': 'MP2_INFO', 'CPHF': 'CPHF', 'OPT_RI_BASIS': 'OPT_RI_BASIS', 'RI_LAPLACE': 'RI_LAPLACE', 'WFC_GPW': 'WFC_GPW', 'ERI_MME': 'ERI_MME', 'INTERACTION_POTENTIAL': 'INTERACTION_POTENTIAL', 'RI_RPA': 'RI_RPA'}
-        self._aliases = {'Ri': 'Ri_metric', 'Row_block_size': 'Row_block', 'Col_block_size': 'Col_block', 'Number_proc': 'Group_size', 'Calc_condition_number': 'Calc_cond_num'}
+        self._keywords = {'Method': 'METHOD', 'Memory': 'MEMORY', 'Scale_s': 'SCALE_S', 'Scale_t': 'SCALE_T', 'Group_size': 'GROUP_SIZE', 'Row_block': 'ROW_BLOCK', 'Col_block': 'COL_BLOCK', 'Calc_cond_num': 'CALC_COND_NUM', 'Ri_metric': 'RI_METRIC', 'Omega_metric': 'OMEGA_METRIC', 'Cutoff_radius_metric': 'CUTOFF_RADIUS_METRIC', 'Eps_range_metric': 'EPS_RANGE_METRIC', 'Eri_method': 'ERI_METHOD', 'Eri_blksize': 'ERI_BLKSIZE', 'Im_time': 'IM_TIME', 'Do_svd': 'DO_SVD', 'Eps_svd': 'EPS_SVD'}
+        self._subsections = {'MP2_INFO': 'MP2_INFO', 'DIRECT_CANONICAL': 'DIRECT_CANONICAL', 'WFC_GPW': 'WFC_GPW', 'RI_MP2': 'RI_MP2', 'OPT_RI_BASIS': 'OPT_RI_BASIS', 'RI_RPA': 'RI_RPA', 'RI_LAPLACE': 'RI_LAPLACE', 'IM_TIME': 'IM_TIME', 'CPHF': 'CPHF', 'INTERACTION_POTENTIAL': 'INTERACTION_POTENTIAL', 'ERI_MME': 'ERI_MME'}
+        self._aliases = {'Number_proc': 'Group_size', 'Row_block_size': 'Row_block', 'Col_block_size': 'Col_block', 'Calc_condition_number': 'Calc_cond_num', 'Ri': 'Ri_metric', 'Imag_time': 'Im_time'}
 
 
     @property
@@ -76,6 +84,13 @@ class _wf_correlation5(InputSection):
         """
         return self.Ri_metric
 
+    @property
+    def Imag_time(self):
+        """
+        See documentation for Im_time
+        """
+        return self.Im_time
+
     @Number_proc.setter
     def Number_proc(self, value):
         self.Group_size = value
@@ -95,3 +110,7 @@ class _wf_correlation5(InputSection):
     @Ri.setter
     def Ri(self, value):
         self.Ri_metric = value
+
+    @Imag_time.setter
+    def Imag_time(self, value):
+        self.Im_time = value

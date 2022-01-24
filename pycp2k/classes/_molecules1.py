@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each346 import _each346
+from ._each365 import _each365
 
 
 class _molecules1(InputSection):
@@ -10,9 +10,9 @@ class _molecules1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each346()
+        self.EACH = _each365()
         self._name = "MOLECULES"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

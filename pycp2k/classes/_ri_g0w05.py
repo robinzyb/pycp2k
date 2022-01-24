@@ -9,10 +9,8 @@ class _ri_g0w05(InputSection):
         InputSection.__init__(self)
         self.Corr_mos_occ = None
         self.Corr_mos_virt = None
-        self.Scaling = None
         self.Numb_poles = None
         self.Omega_max_fit = None
-        self.Stop_crit = None
         self.Print_fit_error = None
         self.Max_iter_fit = None
         self.Check_fit = None
@@ -23,18 +21,8 @@ class _ri_g0w05(InputSection):
         self.Hf_like_ev_start = None
         self.Ev_sc_gw_remove_neg_virt_energies = None
         self.Print_gw_details = None
+        self.Print_exx = None
         self.Ri_sigma_x = None
-        self.Normalize_sigma = None
-        self.Neglect_normalization_sigma_x = None
-        self.Ri_metric = None
-        self.Mix_exchange = None
-        self.Fraction_exx = None
-        self.Contour_def_start = None
-        self.Contour_def_end = None
-        self.Contour_def_offset = None
-        self.Atoms = None
-        self.Atom_range = None
-        self.Eps_charge = None
         self.Ic_corr_list = None
         self.Ic_corr_list_beta = None
         self.Periodic = None
@@ -42,13 +30,14 @@ class _ri_g0w05(InputSection):
         self.Image_charge_model = None
         self.Analytic_continuation = None
         self.Nparam_pade = None
+        self.Gamma_only_sigma = None
         self.PERIODIC = _periodic16()
         self.BSE = _bse5()
         self.IC = _ic5()
         self._name = "RI_G0W0"
-        self._keywords = {'Image_charge_model': 'IMAGE_CHARGE_MODEL', 'Hf_like_ev_start': 'HF_LIKE_EV_START', 'Corr_mos_virt': 'CORR_MOS_VIRT', 'Neglect_normalization_sigma_x': 'NEGLECT_NORMALIZATION_SIGMA_X', 'Eps_ev_sc_iter': 'EPS_EV_SC_ITER', 'Print_fit_error': 'PRINT_FIT_ERROR', 'Analytic_continuation': 'ANALYTIC_CONTINUATION', 'Fermi_level_offset': 'FERMI_LEVEL_OFFSET', 'Contour_def_end': 'CONTOUR_DEF_END', 'Contour_def_start': 'CONTOUR_DEF_START', 'Contour_def_offset': 'CONTOUR_DEF_OFFSET', 'Check_fit': 'CHECK_FIT', 'Atoms': 'ATOMS', 'Normalize_sigma': 'NORMALIZE_SIGMA', 'Ev_sc_iter': 'EV_SC_ITER', 'Ic_corr_list': 'IC_CORR_LIST', 'Mix_exchange': 'MIX_EXCHANGE', 'Periodic': 'PERIODIC', 'Eps_charge': 'EPS_CHARGE', 'Omega_max_fit': 'OMEGA_MAX_FIT', 'Print_gw_details': 'PRINT_GW_DETAILS', 'Corr_mos_occ': 'CORR_MOS_OCC', 'Ri_sigma_x': 'RI_SIGMA_X', 'Fraction_exx': 'FRACTION_EXX', 'Bse': 'BSE', 'Scaling': 'SCALING', 'Ic_corr_list_beta': 'IC_CORR_LIST_BETA', 'Max_iter_fit': 'MAX_ITER_FIT', 'Ev_sc_gw_remove_neg_virt_energies': 'EV_SC_GW_REMOVE_NEG_VIRT_ENERGIES', 'Ri_metric': 'RI_METRIC', 'Nparam_pade': 'NPARAM_PADE', 'Numb_poles': 'NUMB_POLES', 'Atom_range': 'ATOM_RANGE', 'Crossing_search': 'CROSSING_SEARCH', 'Stop_crit': 'STOP_CRIT'}
-        self._subsections = {'PERIODIC': 'PERIODIC', 'IC': 'IC', 'BSE': 'BSE'}
-        self._aliases = {'Cd_offset': 'Contour_def_offset', 'Remove_neg': 'Ev_sc_gw_remove_neg_virt_energies', 'Ri': 'Ri_metric', 'Ic': 'Image_charge_model', 'A_scaling': 'Scaling', 'Corr_occ': 'Corr_mos_occ', 'Stop_crit_1': 'Stop_crit', 'Cd_start': 'Contour_def_start', 'Alpha': 'Fraction_exx', 'Fit_error': 'Print_fit_error', 'Corr_virt': 'Corr_mos_virt', 'Cd_end': 'Contour_def_end'}
+        self._keywords = {'Corr_mos_occ': 'CORR_MOS_OCC', 'Corr_mos_virt': 'CORR_MOS_VIRT', 'Numb_poles': 'NUMB_POLES', 'Omega_max_fit': 'OMEGA_MAX_FIT', 'Print_fit_error': 'PRINT_FIT_ERROR', 'Max_iter_fit': 'MAX_ITER_FIT', 'Check_fit': 'CHECK_FIT', 'Crossing_search': 'CROSSING_SEARCH', 'Fermi_level_offset': 'FERMI_LEVEL_OFFSET', 'Ev_sc_iter': 'EV_SC_ITER', 'Eps_ev_sc_iter': 'EPS_EV_SC_ITER', 'Hf_like_ev_start': 'HF_LIKE_EV_START', 'Ev_sc_gw_remove_neg_virt_energies': 'EV_SC_GW_REMOVE_NEG_VIRT_ENERGIES', 'Print_gw_details': 'PRINT_GW_DETAILS', 'Print_exx': 'PRINT_EXX', 'Ri_sigma_x': 'RI_SIGMA_X', 'Ic_corr_list': 'IC_CORR_LIST', 'Ic_corr_list_beta': 'IC_CORR_LIST_BETA', 'Periodic': 'PERIODIC', 'Bse': 'BSE', 'Image_charge_model': 'IMAGE_CHARGE_MODEL', 'Analytic_continuation': 'ANALYTIC_CONTINUATION', 'Nparam_pade': 'NPARAM_PADE', 'Gamma_only_sigma': 'GAMMA_ONLY_SIGMA'}
+        self._subsections = {'PERIODIC': 'PERIODIC', 'BSE': 'BSE', 'IC': 'IC'}
+        self._aliases = {'Corr_occ': 'Corr_mos_occ', 'Corr_virt': 'Corr_mos_virt', 'Fit_error': 'Print_fit_error', 'Remove_neg': 'Ev_sc_gw_remove_neg_virt_energies', 'Ic': 'Image_charge_model', 'Gamma': 'Gamma_only_sigma'}
 
 
     @property
@@ -66,20 +55,6 @@ class _ri_g0w05(InputSection):
         return self.Corr_mos_virt
 
     @property
-    def A_scaling(self):
-        """
-        See documentation for Scaling
-        """
-        return self.Scaling
-
-    @property
-    def Stop_crit_1(self):
-        """
-        See documentation for Stop_crit
-        """
-        return self.Stop_crit
-
-    @property
     def Fit_error(self):
         """
         See documentation for Print_fit_error
@@ -94,46 +69,18 @@ class _ri_g0w05(InputSection):
         return self.Ev_sc_gw_remove_neg_virt_energies
 
     @property
-    def Ri(self):
-        """
-        See documentation for Ri_metric
-        """
-        return self.Ri_metric
-
-    @property
-    def Alpha(self):
-        """
-        See documentation for Fraction_exx
-        """
-        return self.Fraction_exx
-
-    @property
-    def Cd_start(self):
-        """
-        See documentation for Contour_def_start
-        """
-        return self.Contour_def_start
-
-    @property
-    def Cd_end(self):
-        """
-        See documentation for Contour_def_end
-        """
-        return self.Contour_def_end
-
-    @property
-    def Cd_offset(self):
-        """
-        See documentation for Contour_def_offset
-        """
-        return self.Contour_def_offset
-
-    @property
     def Ic(self):
         """
         See documentation for Image_charge_model
         """
         return self.Image_charge_model
+
+    @property
+    def Gamma(self):
+        """
+        See documentation for Gamma_only_sigma
+        """
+        return self.Gamma_only_sigma
 
     @Corr_occ.setter
     def Corr_occ(self, value):
@@ -143,14 +90,6 @@ class _ri_g0w05(InputSection):
     def Corr_virt(self, value):
         self.Corr_mos_virt = value
 
-    @A_scaling.setter
-    def A_scaling(self, value):
-        self.Scaling = value
-
-    @Stop_crit_1.setter
-    def Stop_crit_1(self, value):
-        self.Stop_crit = value
-
     @Fit_error.setter
     def Fit_error(self, value):
         self.Print_fit_error = value
@@ -159,26 +98,10 @@ class _ri_g0w05(InputSection):
     def Remove_neg(self, value):
         self.Ev_sc_gw_remove_neg_virt_energies = value
 
-    @Ri.setter
-    def Ri(self, value):
-        self.Ri_metric = value
-
-    @Alpha.setter
-    def Alpha(self, value):
-        self.Fraction_exx = value
-
-    @Cd_start.setter
-    def Cd_start(self, value):
-        self.Contour_def_start = value
-
-    @Cd_end.setter
-    def Cd_end(self, value):
-        self.Contour_def_end = value
-
-    @Cd_offset.setter
-    def Cd_offset(self, value):
-        self.Contour_def_offset = value
-
     @Ic.setter
     def Ic(self, value):
         self.Image_charge_model = value
+
+    @Gamma.setter
+    def Gamma(self, value):
+        self.Gamma_only_sigma = value

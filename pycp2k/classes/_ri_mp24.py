@@ -8,7 +8,7 @@ class _ri_mp24(InputSection):
         self.Eps_canonical = None
         self.Free_hfx_buffer = None
         self._name = "RI_MP2"
-        self._keywords = {'Block_size': 'BLOCK_SIZE', 'Free_hfx_buffer': 'FREE_HFX_BUFFER', 'Eps_canonical': 'EPS_CANONICAL'}
+        self._keywords = {'Block_size': 'BLOCK_SIZE', 'Eps_canonical': 'EPS_CANONICAL', 'Free_hfx_buffer': 'FREE_HFX_BUFFER'}
         self._aliases = {'Message_size': 'Block_size'}
 
 

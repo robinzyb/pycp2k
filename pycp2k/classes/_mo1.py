@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each224 import _each224
+from ._each238 import _each238
 
 
 class _mo1(InputSection):
@@ -16,11 +16,11 @@ class _mo1(InputSection):
         self.Occupation_numbers = None
         self.Ndigits = None
         self.Mo_index_range = None
-        self.EACH = _each224()
+        self.EACH = _each238()
         self._name = "MO"
-        self._keywords = {'Cartesian': 'CARTESIAN', 'Mo_index_range': 'MO_INDEX_RANGE', 'Log_print_key': 'LOG_PRINT_KEY', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Occupation_numbers': 'OCCUPATION_NUMBERS', 'Ndigits': 'NDIGITS', 'Eigenvalues': 'EIGENVALUES', 'Filename': 'FILENAME', 'Eigenvectors': 'EIGENVECTORS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Cartesian': 'CARTESIAN', 'Eigenvalues': 'EIGENVALUES', 'Eigenvectors': 'EIGENVECTORS', 'Occupation_numbers': 'OCCUPATION_NUMBERS', 'Ndigits': 'NDIGITS', 'Mo_index_range': 'MO_INDEX_RANGE'}
         self._subsections = {'EACH': 'EACH'}
-        self._aliases = {'Eigvecs': 'Eigenvectors', 'Eigvals': 'Eigenvalues', 'Mo_range': 'Mo_index_range', 'Occnums': 'Occupation_numbers', 'Range': 'Mo_index_range'}
+        self._aliases = {'Eigvals': 'Eigenvalues', 'Eigvecs': 'Eigenvectors', 'Occnums': 'Occupation_numbers', 'Mo_range': 'Mo_index_range', 'Range': 'Mo_index_range'}
         self._attributes = ['Section_parameters']
 
 

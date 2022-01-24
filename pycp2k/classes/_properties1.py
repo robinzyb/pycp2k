@@ -17,5 +17,5 @@ class _properties1(InputSection):
         self.FIT_CHARGE = _fit_charge1()
         self.TDDFPT = _tddfpt2()
         self._name = "PROPERTIES"
-        self._subsections = {'ET_COUPLING': 'ET_COUPLING', 'FIT_CHARGE': 'FIT_CHARGE', 'ATOMIC': 'ATOMIC', 'LINRES': 'LINRES', 'TDDFPT': 'TDDFPT', 'RESP': 'RESP'}
+        self._subsections = {'LINRES': 'LINRES', 'ET_COUPLING': 'ET_COUPLING', 'RESP': 'RESP', 'ATOMIC': 'ATOMIC', 'FIT_CHARGE': 'FIT_CHARGE', 'TDDFPT': 'TDDFPT'}
 

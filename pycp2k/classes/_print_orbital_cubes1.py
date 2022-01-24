@@ -9,5 +9,5 @@ class _print_orbital_cubes1(InputSection):
         self.Blist = None
         self.Stride = None
         self._name = "PRINT_ORBITAL_CUBES"
-        self._keywords = {'Filename': 'FILENAME', 'Blist': 'BLIST', 'Alist': 'ALIST', 'Stride': 'STRIDE'}
+        self._keywords = {'Filename': 'FILENAME', 'Alist': 'ALIST', 'Blist': 'BLIST', 'Stride': 'STRIDE'}
 

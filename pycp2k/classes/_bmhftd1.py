@@ -16,5 +16,5 @@ class _bmhftd1(InputSection):
         self.Rmin = None
         self.Rmax = None
         self._name = "BMHFTD"
-        self._keywords = {'Rmax': 'RMAX', 'Atoms': 'ATOMS', 'Order': 'ORDER', 'A': 'A', 'Rcut': 'RCUT', 'Bd': 'BD', 'Map_atoms': 'MAP_ATOMS', 'C': 'C', 'B': 'B', 'Rmin': 'RMIN', 'D': 'D'}
+        self._keywords = {'Atoms': 'ATOMS', 'Map_atoms': 'MAP_ATOMS', 'Rcut': 'RCUT', 'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D', 'Bd': 'BD', 'Order': 'ORDER', 'Rmin': 'RMIN', 'Rmax': 'RMAX'}
 

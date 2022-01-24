@@ -19,5 +19,5 @@ class _print15(InputSection):
         self.COM = _com1()
         self._name = "PRINT"
         self._keywords = {'Imaginary_time_stride': 'IMAGINARY_TIME_STRIDE'}
-        self._subsections = {'CENTROID_GYR': 'CENTROID_GYR', 'ENERGY': 'ENERGY', 'CENTROID_POS': 'CENTROID_POS', 'CENTROID_VEL': 'CENTROID_VEL', 'ACTION': 'ACTION', 'COM': 'COM'}
+        self._subsections = {'ENERGY': 'ENERGY', 'ACTION': 'ACTION', 'CENTROID_POS': 'CENTROID_POS', 'CENTROID_VEL': 'CENTROID_VEL', 'CENTROID_GYR': 'CENTROID_GYR', 'COM': 'COM'}
 

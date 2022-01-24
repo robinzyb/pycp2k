@@ -23,8 +23,8 @@ class _geo_opt1(InputSection):
         self.TRANSITION_STATE = _transition_state1()
         self.PRINT_list = []
         self._name = "GEO_OPT"
-        self._keywords = {'Max_force': 'MAX_FORCE', 'Rms_dr': 'RMS_DR', 'Step_start_val': 'STEP_START_VAL', 'Rms_force': 'RMS_FORCE', 'Optimizer': 'OPTIMIZER', 'Max_dr': 'MAX_DR', 'Type': 'TYPE', 'Max_iter': 'MAX_ITER'}
-        self._subsections = {'TRANSITION_STATE': 'TRANSITION_STATE', 'BFGS': 'BFGS', 'CG': 'CG', 'LBFGS': 'LBFGS'}
+        self._keywords = {'Type': 'TYPE', 'Optimizer': 'OPTIMIZER', 'Max_iter': 'MAX_ITER', 'Max_dr': 'MAX_DR', 'Max_force': 'MAX_FORCE', 'Rms_dr': 'RMS_DR', 'Rms_force': 'RMS_FORCE', 'Step_start_val': 'STEP_START_VAL'}
+        self._subsections = {'LBFGS': 'LBFGS', 'CG': 'CG', 'BFGS': 'BFGS', 'TRANSITION_STATE': 'TRANSITION_STATE'}
         self._repeated_subsections = {'PRINT': '_print3'}
         self._aliases = {'Minimizer': 'Optimizer'}
         self._attributes = ['PRINT_list']

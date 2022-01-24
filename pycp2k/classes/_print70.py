@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each443 import _each443
+from ._each418 import _each418
 
 
 class _print70(InputSection):
@@ -11,9 +11,9 @@ class _print70(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Load_balance_info = None
-        self.EACH = _each443()
+        self.EACH = _each418()
         self._name = "PRINT"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Load_balance_info': 'LOAD_BALANCE_INFO'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Load_balance_info': 'LOAD_BALANCE_INFO'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

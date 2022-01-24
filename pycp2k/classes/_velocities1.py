@@ -14,7 +14,7 @@ class _velocities1(InputSection):
         self.Format = None
         self.EACH = _each85()
         self._name = "VELOCITIES"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Format': 'FORMAT', 'Filename': 'FILENAME', 'Unit': 'UNIT'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT', 'Format': 'FORMAT'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

@@ -27,6 +27,8 @@ class _helium1(InputSection):
         self.N_inner = None
         self.N_outer = None
         self.Sampling_method = None
+        self.Coord_init_temp = None
+        self.Solute_radius = None
         self.Periodic = None
         self.Cell_size = None
         self.Cell_shape = None
@@ -44,9 +46,9 @@ class _helium1(InputSection):
         self.RNG_STATE = _rng_state1()
         self.PRINT = _print14()
         self._name = "HELIUM"
-        self._keywords = {'Potential_file_name': 'POTENTIAL_FILE_NAME', 'Get_forces': 'GET_FORCES', 'Helium_only': 'HELIUM_ONLY', 'Rng_seed': 'RNG_SEED', 'Presample': 'PRESAMPLE', 'N_outer': 'N_OUTER', 'Solute_interaction': 'SOLUTE_INTERACTION', 'Droplet_radius': 'DROPLET_RADIUS', 'Interaction_pot_scan': 'INTERACTION_POT_SCAN', 'N_inner': 'N_INNER', 'Cell_shape': 'CELL_SHAPE', 'Nbeads': 'NBEADS', 'Cell_size': 'CELL_SIZE', 'Sampling_method': 'SAMPLING_METHOD', 'Periodic': 'PERIODIC', 'Density': 'DENSITY', 'Natoms': 'NATOMS', 'Num_env': 'NUM_ENV'}
-        self._subsections = {'RDF': 'RDF', 'RNG_STATE': 'RNG_STATE', 'PERM': 'PERM', 'CEPERLEY': 'CEPERLEY', 'WORM': 'WORM', 'COORD': 'COORD', 'FORCE': 'FORCE', 'AVERAGES': 'AVERAGES', 'PRINT': 'PRINT', 'RHO': 'RHO'}
-        self._aliases = {'Irot': 'N_outer', 'Inorot': 'N_inner'}
+        self._keywords = {'Helium_only': 'HELIUM_ONLY', 'Interaction_pot_scan': 'INTERACTION_POT_SCAN', 'Num_env': 'NUM_ENV', 'Potential_file_name': 'POTENTIAL_FILE_NAME', 'Get_forces': 'GET_FORCES', 'Solute_interaction': 'SOLUTE_INTERACTION', 'Natoms': 'NATOMS', 'Nbeads': 'NBEADS', 'Rng_seed': 'RNG_SEED', 'N_inner': 'N_INNER', 'N_outer': 'N_OUTER', 'Sampling_method': 'SAMPLING_METHOD', 'Coord_init_temp': 'COORD_INIT_TEMP', 'Solute_radius': 'SOLUTE_RADIUS', 'Periodic': 'PERIODIC', 'Cell_size': 'CELL_SIZE', 'Cell_shape': 'CELL_SHAPE', 'Droplet_radius': 'DROPLET_RADIUS', 'Density': 'DENSITY', 'Presample': 'PRESAMPLE'}
+        self._subsections = {'CEPERLEY': 'CEPERLEY', 'WORM': 'WORM', 'RDF': 'RDF', 'RHO': 'RHO', 'COORD': 'COORD', 'PERM': 'PERM', 'AVERAGES': 'AVERAGES', 'FORCE': 'FORCE', 'RNG_STATE': 'RNG_STATE', 'PRINT': 'PRINT'}
+        self._aliases = {'Inorot': 'N_inner', 'Irot': 'N_outer'}
         self._attributes = ['Section_parameters']
 
 

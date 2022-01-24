@@ -9,5 +9,5 @@ class _print18(InputSection):
         self.PROGRAM_RUN_INFO = _program_run_info12()
         self.DIPOLE = _dipole1()
         self._name = "PRINT"
-        self._subsections = {'DIPOLE': 'DIPOLE', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO'}
+        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'DIPOLE': 'DIPOLE'}
 

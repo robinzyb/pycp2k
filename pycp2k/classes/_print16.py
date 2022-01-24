@@ -13,6 +13,7 @@ from ._shell_forces1 import _shell_forces1
 from ._core_forces1 import _core_forces1
 from ._mixed_energies1 import _mixed_energies1
 from ._stress1 import _stress1
+from ._polar_matrix1 import _polar_matrix1
 from ._restart5 import _restart5
 from ._restart_history1 import _restart_history1
 from ._translation_vector1 import _translation_vector1
@@ -35,9 +36,10 @@ class _print16(InputSection):
         self.CORE_FORCES = _core_forces1()
         self.MIXED_ENERGIES = _mixed_energies1()
         self.STRESS = _stress1()
+        self.POLAR_MATRIX = _polar_matrix1()
         self.RESTART = _restart5()
         self.RESTART_HISTORY = _restart_history1()
         self.TRANSLATION_VECTOR = _translation_vector1()
         self._name = "PRINT"
-        self._subsections = {'CORE_FORCES': 'CORE_FORCES', 'MIXED_ENERGIES': 'MIXED_ENERGIES', 'FORCES': 'FORCES', 'TRANSLATION_VECTOR': 'TRANSLATION_VECTOR', 'RESTART_HISTORY': 'RESTART_HISTORY', 'FORCE_MIXING_LABELS': 'FORCE_MIXING_LABELS', 'SHELL_FORCES': 'SHELL_FORCES', 'TRAJECTORY': 'TRAJECTORY', 'CORE_TRAJECTORY': 'CORE_TRAJECTORY', 'CELL': 'CELL', 'SHELL_TRAJECTORY': 'SHELL_TRAJECTORY', 'STRUCTURE_DATA': 'STRUCTURE_DATA', 'SHELL_VELOCITIES': 'SHELL_VELOCITIES', 'VELOCITIES': 'VELOCITIES', 'CORE_VELOCITIES': 'CORE_VELOCITIES', 'STRESS': 'STRESS', 'RESTART': 'RESTART'}
+        self._subsections = {'TRAJECTORY': 'TRAJECTORY', 'SHELL_TRAJECTORY': 'SHELL_TRAJECTORY', 'CORE_TRAJECTORY': 'CORE_TRAJECTORY', 'CELL': 'CELL', 'VELOCITIES': 'VELOCITIES', 'SHELL_VELOCITIES': 'SHELL_VELOCITIES', 'CORE_VELOCITIES': 'CORE_VELOCITIES', 'STRUCTURE_DATA': 'STRUCTURE_DATA', 'FORCE_MIXING_LABELS': 'FORCE_MIXING_LABELS', 'FORCES': 'FORCES', 'SHELL_FORCES': 'SHELL_FORCES', 'CORE_FORCES': 'CORE_FORCES', 'MIXED_ENERGIES': 'MIXED_ENERGIES', 'STRESS': 'STRESS', 'POLAR_MATRIX': 'POLAR_MATRIX', 'RESTART': 'RESTART', 'RESTART_HISTORY': 'RESTART_HISTORY', 'TRANSLATION_VECTOR': 'TRANSLATION_VECTOR'}
 

@@ -20,8 +20,8 @@ class _rot_opt1(InputSection):
         self.BFGS = _bfgs2()
         self.PRINT_list = []
         self._name = "ROT_OPT"
-        self._keywords = {'Max_force': 'MAX_FORCE', 'Rms_dr': 'RMS_DR', 'Step_start_val': 'STEP_START_VAL', 'Rms_force': 'RMS_FORCE', 'Optimizer': 'OPTIMIZER', 'Max_dr': 'MAX_DR', 'Max_iter': 'MAX_ITER'}
-        self._subsections = {'BFGS': 'BFGS', 'CG': 'CG', 'LBFGS': 'LBFGS'}
+        self._keywords = {'Optimizer': 'OPTIMIZER', 'Max_iter': 'MAX_ITER', 'Max_dr': 'MAX_DR', 'Max_force': 'MAX_FORCE', 'Rms_dr': 'RMS_DR', 'Rms_force': 'RMS_FORCE', 'Step_start_val': 'STEP_START_VAL'}
+        self._subsections = {'LBFGS': 'LBFGS', 'CG': 'CG', 'BFGS': 'BFGS'}
         self._repeated_subsections = {'PRINT': '_print2'}
         self._aliases = {'Minimizer': 'Optimizer'}
         self._attributes = ['PRINT_list']
